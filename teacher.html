@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HSK学练平台</title>
+<title>HSK学练平台 - 教师端</title>
 <script src="https://cdn.staticfile.net/vue/3.3.4/vue.global.prod.js"></script>
 <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
 <script src="lesson_data.js"></script>
@@ -77,14 +77,14 @@ h2.module-title{margin-top:0;font-size:26px;border-bottom:3px solid var(--primar
 .blind-box{font-size:70px;cursor:pointer;}
 .box-word{font-size:34px;font-weight:bold;color:var(--purple);background:#fff;padding:18px 32px;border:4px solid var(--purple);border-radius:14px;}
 
-/* 语法逻辑模块（连词成句/看图造句/情境演练） */
+/* 语法逻辑模块 */
 .chunk-bank{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;min-height:90px;margin-top:25px;}
 .chunk-btn{padding:13px 22px;font-size:22px;font-weight:bold;background:#fff;border:2px solid #e0e0e0;border-radius:10px;cursor:pointer;box-shadow:0 4px 0 #e0e0e0;}
 .chunk-btn.in-answer{background:#e3f2fd;border-color:var(--blue);box-shadow:0 4px 0 var(--blue);color:#1565c0;pointer-events:none;}
 .img-keyword-overlay{position:absolute;bottom:0;left:0;width:100%;background:linear-gradient(transparent,rgba(0,0,0,.8));padding:25px 0 12px;display:flex;justify-content:center;gap:10px;}
 .img-keyword-tag{background:rgba(255,255,255,.95);color:#E65100;border:2px solid #FF9800;font-size:18px;font-weight:900;padding:5px 14px;border-radius:10px;}
 
-/* 诸神之战新增分组 */
+/* 诸神之战分组 */
 .roster-grid{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:20px 0;}
 .stu-tag{background:#f1f5f9;border:2px solid #cbd5e1;padding:8px 15px;border-radius:20px;font-weight:bold;color:#475569;}
 .pk-teams-wrapper{display:flex;gap:18px;margin-top:25px;width:100%;justify-content:center;}
@@ -94,7 +94,7 @@ h2.module-title{margin-top:0;font-size:26px;border-bottom:3px solid var(--primar
 .team-green{background:#e8f5e9;border:4px solid #81c784;}
 .team-member{background:#fff;padding:6px 12px;border-radius:8px;font-weight:bold;font-size:15px;box-shadow:0 2px 4px rgba(0,0,0,.1);}
 
-/* ===== 组队页面美化（新增） ===== */
+/* 组队美化 */
 .setup-phase-wrapper{max-width:1000px;margin:0 auto;}
 .roster-grid{background:#f8fafc;border-radius:16px;padding:24px;margin:20px 0;border:2px dashed #cbd5e1;}
 .setup-action-bar{display:flex;justify-content:center;gap:20px;margin:30px 0;}
@@ -103,7 +103,7 @@ h2.module-title{margin-top:0;font-size:26px;border-bottom:3px solid var(--primar
 .team-member{font-size:17px;padding:8px 16px;box-shadow:0 3px 8px rgba(0,0,0,.12);}
 .start-battle-btn{background:linear-gradient(135deg,#43a047,#66bb6a) !important;box-shadow:0 6px 0 #2e7d32 !important;}
 
-/* 复用中高级平台样式 */
+/* 复用样式 */
 .matching-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:900px;margin:20px auto;}
 .matching-item{background:#ecf0f1;border:2px solid #bdc3c7;padding:14px;font-size:22px;font-weight:500;border-radius:10px;cursor:pointer;text-align:center;}
 .matching-item.selected{background:var(--blue);color:#fff;border-color:var(--primary-blue);}
@@ -126,7 +126,6 @@ h2.module-title{margin-top:0;font-size:26px;border-bottom:3px solid var(--primar
 .option-btn{background:#fff;border:2px solid #bdc3c7;padding:14px 28px;font-size:22px;font-weight:bold;border-radius:10px;cursor:pointer;}
 .option-btn.correct{background:#eafaf1;border-color:var(--green);color:var(--green);}
 .option-btn.wrong{background:#fdedec;border-color:var(--red);color:var(--red);}
-.synonym-explanation{background:#eaf6fd;border:2px solid var(--blue);padding:18px;margin-top:25px;border-radius:10px;font-size:17px;line-height:1.6;}
 .sorting-item{background:#f8fafc;border:2px solid #ecf0f1;border-radius:12px;padding:18px;margin-bottom:12px;font-size:19px;display:flex;gap:14px;align-items:center;cursor:grab;}
 .sorting-tag{font-weight:bold;font-size:20px;color:var(--primary-blue);}
 .sorting-feedback{margin-top:25px;padding:18px;border-radius:10px;font-size:20px;font-weight:bold;text-align:center;}
@@ -165,7 +164,6 @@ h2.module-title{margin-top:0;font-size:26px;border-bottom:3px solid var(--primar
 .jeopardy-category{text-align:center;font-size:17px;font-weight:bold;padding-bottom:8px;}
 .jeopardy-question-btn{background:#fff;border:2px solid var(--border-color);color:var(--primary-blue);font-size:30px;font-weight:800;padding:26px 0;border-radius:12px;cursor:pointer;}
 .jeopardy-question-btn.answered{background:#bdc3c7;color:#7f8c8d;cursor:not-allowed;opacity:.6;}
-.jeopardy-buzzer-winner-display{margin:18px 0;padding:18px;border-radius:12px;text-align:center;font-size:26px;font-weight:bold;color:#fff;}
 .jeopardy-modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.7);display:flex;justify-content:center;align-items:center;z-index:2000;}
 .jeopardy-modal-content{background:#fff;width:90%;max-width:800px;border-radius:20px;padding:36px;text-align:center;}
 .jeopardy-modal-question{font-size:30px;line-height:1.6;margin-bottom:26px;}
@@ -232,7 +230,7 @@ h2.module-title{margin-top:0;font-size:26px;border-bottom:3px solid var(--primar
 
   <div class="main-content"><div class="panel-container">
 
-    <!-- ===== 核心词汇 v1-v6（原样保留） ===== -->
+    <!-- ===== 核心词汇 ===== -->
     <div class="panel" v-if="currentActivity==='v1_pinyin_match'"><h2 class="module-title">拼音汉字配对（第{{pinyinMatch.round+1}}/{{classData.module_1_vocab.pinyin_match.length}}轮）</h2><div class="matching-grid"><div><h3>汉字</h3><div v-for="item in pinyinMatch.currentHanzi" :key="item.id" class="matching-item" :class="{selected:pinyinMatch.selectedHanzi?.id===item.id,wrong:item.isWrong}" @click="selectHanzi(item)">{{item.text}}</div></div><div><h3>拼音</h3><div v-for="item in pinyinMatch.currentPinyin" :key="item.id" class="matching-item" :class="{selected:pinyinMatch.selectedPinyin?.id===item.id,wrong:item.isWrong}" @click="selectPinyin(item)">{{item.text}}</div></div></div><button v-if="pinyinMatch.isRoundComplete" class="next-btn" @click="nextPinyinMatchRound">下一轮</button></div>
 
     <div class="panel" v-if="currentActivity==='v2_collocation_match'"><h2 class="module-title">词语搭配</h2><div class="matching-grid"><div><div v-for="item in collocationMatch.leftItems" :key="item.id" class="matching-item" :class="{selected:collocationMatch.selectedItem?.id===item.id,correct:item.isCorrect,incorrect:item.isIncorrect}" @click="onCollocationItemClick(item)">{{item.text}}</div></div><div><div v-for="item in collocationMatch.rightItems" :key="item.id" class="matching-item" :class="{selected:collocationMatch.selectedItem?.id===item.id,correct:item.isCorrect,incorrect:item.isIncorrect}" @click="onCollocationItemClick(item)">{{item.text}}</div></div></div><div class="interaction-bar"><button class="next-btn" @click="setupCollocationMatch" style="background:var(--orange);">重置本轮</button></div></div>
@@ -275,21 +273,24 @@ h2.module-title{margin-top:0;font-size:26px;border-bottom:3px solid var(--primar
 
     <div class="panel" v-if="currentActivity==='tools_picker'"><h2 class="module-title">随机点名</h2><div class="picker-display">{{pickedStudent}}</div><button class="next-btn" @click="startPicker" :disabled="isSpinning">🎲开始抽取</button></div>
 
-    <!-- ===== 诸神之战：先分组后对战（组队页面已美化） ===== -->
+    <!-- ===== 诸神之战：扫码自动分组并同步 ===== -->
     <div class="panel" v-if="currentActivity==='j1_board'" style="background:transparent;box-shadow:none;">
       <div v-if="jeopardy.phase==='setup'" class="setup-phase-wrapper">
-        <h2 class="module-title">🧑‍🤝‍🧑 组队</h2>
-        <div class="roster-grid"><span class="stu-tag" v-for="s in classData.students" :key="s">{{s}}</span></div>
-        <div class="setup-action-bar">
-          <button class="next-btn" @click="shuffleJeopardyTeams" style="background:var(--purple);font-size:18px;">🔗随机分组</button>
+        <h2 class="module-title">🧑‍🤝‍🧑 已扫码学生名单（当前：{{ activeStudents.length }}人）</h2>
+        <div class="roster-grid">
+          <span class="stu-tag" v-for="s in activeStudents" :key="s">🟢 {{s}}</span>
+          <span v-if="activeStudents.length === 0" style="color:#888;">暂无学生扫码加入，请先让学生扫码输入姓名...</span>
         </div>
-        <div class="pk-teams-wrapper" v-if="jeopardy.teams.wei.length>0">
+        <div class="setup-action-bar">
+          <button class="next-btn" @click="autoGroupActiveStudents" style="background:var(--purple);font-size:18px;">🔗 重新平均分配队伍</button>
+        </div>
+        <div class="pk-teams-wrapper" v-if="jeopardy.teams.wei.length > 0 || jeopardy.teams.wu.length > 0 || jeopardy.teams.shu.length > 0">
           <div class="team-box team-red"><h3 style="color:var(--team-wei);">{{jeopardy.teamNames.wei}}（{{jeopardy.teams.wei.length}}人）</h3><span class="team-member" style="color:var(--team-wei);" v-for="s in jeopardy.teams.wei" :key="s">{{s}}</span></div>
           <div class="team-box team-blue"><h3 style="color:var(--team-wu);">{{jeopardy.teamNames.wu}}（{{jeopardy.teams.wu.length}}人）</h3><span class="team-member" style="color:var(--team-wu);" v-for="s in jeopardy.teams.wu" :key="s">{{s}}</span></div>
           <div class="team-box team-green"><h3 style="color:var(--team-shu);">{{jeopardy.teamNames.shu}}（{{jeopardy.teams.shu.length}}人）</h3><span class="team-member" style="color:var(--team-shu);" v-for="s in jeopardy.teams.shu" :key="s">{{s}}</span></div>
         </div>
-        <div class="setup-action-bar" v-if="jeopardy.teams.wei.length>0">
-          <button class="next-btn start-battle-btn" @click="jeopardy.phase='play'" style="font-size:20px;padding:14px 40px;">🚀开始比赛</button>
+        <div class="setup-action-bar" v-if="jeopardy.teams.wei.length > 0 || jeopardy.teams.wu.length > 0 || jeopardy.teams.shu.length > 0">
+          <button class="next-btn start-battle-btn" @click="jeopardy.phase='play'" style="font-size:20px;padding:14px 40px;">🚀开始答题比赛</button>
         </div>
       </div>
 
@@ -299,13 +300,16 @@ h2.module-title{margin-top:0;font-size:26px;border-bottom:3px solid var(--primar
           <div class="team-score-card wu"><div class="team-name">{{jeopardy.teamNames.wu}}</div><div class="team-score">{{jeopardy.scores.wu}}</div></div>
           <div class="team-score-card shu"><div class="team-name">{{jeopardy.teamNames.shu}}</div><div class="team-score">{{jeopardy.scores.shu}}</div></div>
         </div>
+        <div v-if="currentBuzzerWinner" class="jeopardy-buzzer-winner-display" :style="{ background: jeopardyBuzzerColor }">
+          📢 抢答者：【{{ jeopardyBuzzerTeamName }}】 {{ currentBuzzerWinner.name }}
+        </div>
         <div class="jeopardy-board">
           <template v-for="(cat,catIndex) in classData.module_8_jeopardy.categories" :key="catIndex"><div class="jeopardy-category">{{cat}}</div></template>
           <template v-for="points in [10,20,30]" :key="points"><template v-for="(cat,catIndex) in classData.module_8_jeopardy.categories" :key="catIndex"><button class="jeopardy-question-btn" @click="selectJeopardyQuestion(catIndex,points)" :class="{answered:jeopardy.answered.has('q_'+catIndex+'_'+points)}" :disabled="jeopardy.answered.has('q_'+catIndex+'_'+points)">{{points}}</button></template></template>
         </div>
         <div class="interaction-bar">
           <button class="next-btn" @click="openExtraPk" style="background:var(--purple);">🎁附加题</button>
-          <button class="next-btn" @click="jeopardy.phase='setup'" style="background:#888;">重新分组</button>
+          <button class="next-btn" @click="jeopardy.phase='setup'" style="background:#888;">分组信息</button>
         </div>
       </div>
     </div>
@@ -318,11 +322,16 @@ h2.module-title{margin-top:0;font-size:26px;border-bottom:3px solid var(--primar
   <div class="jeopardy-modal-content">
     <div class="jeopardy-modal-question">{{jeopardy.currentQuestion.question}}</div>
     <div class="jeopardy-modal-question-en">{{jeopardy.currentQuestion.question_en}}</div>
+
+    <div v-if="currentBuzzerWinner" style="margin:15px 0; font-size:22px; font-weight:bold;" :style="{ color: jeopardyBuzzerColor }">
+      ⚡ 抢到的是：【{{ jeopardyBuzzerTeamName }}】 {{ currentBuzzerWinner.name }}
+    </div>
+
     <div v-if="jeopardy.showAnswer" class="jeopardy-modal-answer"><strong>答案:</strong> {{jeopardy.currentQuestion.answer}}</div>
     <div class="interaction-bar">
-      <button class="next-btn" @click="awardPoints('wei')" style="background:var(--team-wei);">{{jeopardy.teamNames.wei}}答对</button>
-      <button class="next-btn" @click="awardPoints('wu')" style="background:var(--team-wu);">{{jeopardy.teamNames.wu}}答对</button>
-      <button class="next-btn" @click="awardPoints('shu')" style="background:var(--team-shu);">{{jeopardy.teamNames.shu}}答对</button>
+      <button class="next-btn" @click="openBuzzerForStudents" style="background:var(--purple);" v-if="!currentBuzzerWinner">🔔 开启抢答</button>
+      <button class="next-btn" @click="judgeBuzzerResult(true)" style="background:var(--green);" v-if="currentBuzzerWinner">✅ 回答正确</button>
+      <button class="next-btn" @click="judgeBuzzerResult(false)" style="background:var(--red);" v-if="currentBuzzerWinner">❌ 回答错误</button>
       <button class="next-btn" @click="jeopardy.showAnswer=!jeopardy.showAnswer" style="background:var(--orange);">{{jeopardy.showAnswer?'隐藏':'显示'}}答案</button>
       <button class="next-btn" @click="closeJeopardyModal" style="background:var(--text-dark);">关闭</button>
     </div>
@@ -366,6 +375,10 @@ createApp({
     const isSidebarHidden = ref(false);
     let client = null;
 
+    // --- 实时已扫码学生集合 ---
+    const activeStudentsSet = reactive(new Set());
+    const activeStudents = computed(() => Array.from(activeStudentsSet));
+
     const navConfig = {
       'vocab': [
         {id:'v1_pinyin_match',name:'拼音配词'},
@@ -373,7 +386,7 @@ createApp({
         {id:'v3_char_match',name:'汉字配对'},
         {id:'v4_guess_word',name:'我说你猜'},
         {id:'v5_vocab_quiz',name:'词义搭配测验'},
-        {id:'v6_translate_match',name:'中俄配对'}
+        {id:'v6_translate_match',name:'中英配对'}
       ],
       'vocabDrill': [
         {id:'vd1_bomb',name:'看图猜词'},
@@ -393,10 +406,28 @@ createApp({
       'jeopardy': [{id:'j1_board',name:'终极对决'}],
       'tools': [{id:'tools_picker',name:'随机点名'}]
     };
-    const currentActivities = computed(() => navConfig[currentModule.value] || []);
-    const setModule = (mod) => { currentModule.value = mod; currentActivity.value = navConfig[mod]?.[0]?.id || ''; };
 
-    // ---- 核心词汇 v1-v6 ----
+    const currentActivities = computed(() => navConfig[currentModule.value] || []);
+
+    const setModule = (mod) => {
+      currentModule.value = mod;
+      currentActivity.value = navConfig[mod]?.[0]?.id || '';
+
+      if (mod === 'jeopardy') {
+        publishMessage({ type: 'SWITCH_MODE', mode: 'jeopardy' });
+        autoGroupActiveStudents();
+      } else {
+        publishMessage({ type: 'SWITCH_MODE', mode: 'echoWall' });
+      }
+    };
+
+    const publishMessage = (msg) => {
+      if (client && client.connected) {
+        client.publish(ROOM_CHANNEL, JSON.stringify(msg));
+      }
+    };
+
+    // ---- 核心词汇 ----
     const pinyinMatch = reactive({ round:0, currentHanzi:[], currentPinyin:[], selectedHanzi:null, selectedPinyin:null, isRoundComplete: computed(()=>pinyinMatch.currentHanzi.length===0) });
     function setupPinyinMatchRound(i){ const rd=classData.value.module_1_vocab.pinyin_match[i]; if(!rd)return; const items=rd.map((w,id)=>({id,word:w,pinyin:classData.value.pinyin_map[w]})); pinyinMatch.currentHanzi=items.map(x=>({id:x.id,text:x.word,isWrong:false})).sort(()=>Math.random()-.5); pinyinMatch.currentPinyin=items.map(x=>({id:x.id,text:x.pinyin,isWrong:false})).sort(()=>Math.random()-.5); pinyinMatch.selectedHanzi=pinyinMatch.selectedPinyin=null; }
     function selectHanzi(h){ pinyinMatch.selectedHanzi=h; if(pinyinMatch.selectedPinyin)checkPinyinMatch(); }
@@ -506,7 +537,7 @@ createApp({
 
     const wordCloudList = ref([]);
 
-    // ---- 诸神之战（分组+对战+附加题） ----
+    // ---- 诸神之战（扫码平均分组与互动抢答） ----
     const jeopardy = reactive({
       phase:'setup', scores:{wei:0,shu:0,wu:0}, answered:new Set(),
       teamNames: classData.value.module_8_jeopardy.teamNames,
@@ -514,10 +545,101 @@ createApp({
       currentQuestion:null, showQuestionModal:false, showAnswer:false,
       showExtraPk:false, showExtraAns:false, extraIdx:0
     });
-    function shuffleJeopardyTeams(){ const students=[...classData.value.students].sort(()=>.5-Math.random()); const third=Math.ceil(students.length/3); jeopardy.teams={wei:[],shu:[],wu:[]}; setTimeout(()=>{ jeopardy.teams.wei=students.slice(0,third); jeopardy.teams.wu=students.slice(third,third*2); jeopardy.teams.shu=students.slice(third*2); },100); }
-    function selectJeopardyQuestion(catIndex,points){ const qId=`q_${catIndex}_${points}`; const qd=classData.value.module_8_jeopardy.questions[qId]; if(qd){ jeopardy.currentQuestion={...qd,id:qId,points}; jeopardy.showQuestionModal=true; jeopardy.showAnswer=false; } }
-    function awardPoints(team){ if(!jeopardy.currentQuestion)return; jeopardy.scores[team]+=jeopardy.currentQuestion.points; jeopardy.answered.add(jeopardy.currentQuestion.id); closeJeopardyModal(); }
-    function closeJeopardyModal(){ jeopardy.showQuestionModal=false; jeopardy.currentQuestion=null; }
+
+    const currentBuzzerWinner = ref(null);
+    const teamColors = { wei: '#e53935', shu: '#43a047', wu: '#1e88e5' };
+    const jeopardyBuzzerColor = computed(() => currentBuzzerWinner.value ? (teamColors[currentBuzzerWinner.value.team] || '#333') : '#333');
+    const jeopardyBuzzerTeamName = computed(() => currentBuzzerWinner.value ? (jeopardy.teamNames[currentBuzzerWinner.value.team] || '未知') : '');
+
+    // 基于【当前扫码学生名单】平均分成 3 组，并广播发回学生端
+    function autoGroupActiveStudents(){
+      const list = activeStudents.value.length > 0 ? [...activeStudents.value] : [...(classData.value.students || [])];
+      if (list.length === 0) return;
+
+      list.sort(() => .5 - Math.random());
+
+      const wei = [], wu = [], shu = [];
+      const teamAssignedList = [];
+
+      list.forEach((name, idx) => {
+        let assignedTeam = 'wei';
+        if (idx % 3 === 1) assignedTeam = 'wu';
+        else if (idx % 3 === 2) assignedTeam = 'shu';
+
+        if (assignedTeam === 'wei') wei.push(name);
+        else if (assignedTeam === 'wu') wu.push(name);
+        else shu.push(name);
+
+        teamAssignedList.push({ name, team: assignedTeam });
+
+        // 单独再广播一次个人分组，防网络丢失
+        publishMessage({ type: 'TEAM_ASSIGN', name, team: assignedTeam });
+      });
+
+      jeopardy.teams = { wei, wu, shu };
+
+      // 全局广播给所有学生端
+      publishMessage({
+        type: 'TEAM_ASSIGN_ALL',
+        list: teamAssignedList
+      });
+    }
+
+    function selectJeopardyQuestion(catIndex,points){
+      const qId=`q_${catIndex}_${points}`;
+      const qd=classData.value.module_8_jeopardy.questions[qId];
+      if(qd){
+        jeopardy.currentQuestion={...qd,id:qId,points};
+        jeopardy.showQuestionModal=true;
+        jeopardy.showAnswer=false;
+        currentBuzzerWinner.value = null;
+      }
+    }
+
+    function openBuzzerForStudents(){
+      currentBuzzerWinner.value = null;
+      publishMessage({ type: 'START_BUZZER' });
+    }
+
+    function judgeBuzzerResult(isCorrect){
+      if (!currentBuzzerWinner.value || !jeopardy.currentQuestion) return;
+      const winner = currentBuzzerWinner.value;
+      const pts = jeopardy.currentQuestion.points;
+
+      if (isCorrect) {
+        jeopardy.scores[winner.team] += pts;
+        jeopardy.answered.add(jeopardy.currentQuestion.id);
+      } else {
+        jeopardy.scores[winner.team] -= Math.floor(pts / 2);
+      }
+
+      publishMessage({
+        type: 'BUZZ_RESULT',
+        winnerName: winner.name,
+        winnerTeam: winner.team,
+        correct: isCorrect,
+        points: isCorrect ? pts : -Math.floor(pts / 2)
+      });
+
+      publishMessage({
+        type: 'SCORE_UPDATE',
+        scores: jeopardy.scores
+      });
+
+      if (isCorrect) {
+        setTimeout(() => closeJeopardyModal(), 1200);
+      } else {
+        currentBuzzerWinner.value = null;
+      }
+    }
+
+    function closeJeopardyModal(){
+      jeopardy.showQuestionModal=false;
+      jeopardy.currentQuestion=null;
+      currentBuzzerWinner.value = null;
+      publishMessage({ type: 'STOP_BUZZER' });
+    }
+
     const currentExtraPk = computed(()=>classData.value.module_8_jeopardy.extra_pk_questions[jeopardy.extraIdx]);
     function openExtraPk(){ jeopardy.showExtraPk=true; jeopardy.showExtraAns=false; jeopardy.extraIdx=Math.floor(Math.random()*classData.value.module_8_jeopardy.extra_pk_questions.length); }
     function nextExtraPk(){ jeopardy.extraIdx=(jeopardy.extraIdx+1)%classData.value.module_8_jeopardy.extra_pk_questions.length; jeopardy.showExtraAns=false; }
@@ -525,19 +647,63 @@ createApp({
     // ---- 工具：随机点名 ----
     const pickedStudent = ref("准备抽取");
     const isSpinning = ref(false);
-    function startPicker(){ if(isSpinning.value)return; isSpinning.value=true; let c=0; const iv=setInterval(()=>{ pickedStudent.value=classData.value.students[Math.floor(Math.random()*classData.value.students.length)]; c++; if(c>20){clearInterval(iv);isSpinning.value=false;} },100); }
+    function startPicker(){
+      const pool = activeStudents.value.length > 0 ? activeStudents.value : classData.value.students;
+      if(isSpinning.value || pool.length === 0) return;
+      isSpinning.value=true; let c=0;
+      const iv=setInterval(()=>{
+        pickedStudent.value=pool[Math.floor(Math.random()*pool.length)];
+        c++; if(c>20){clearInterval(iv);isSpinning.value=false;}
+      },100);
+    }
 
     // ---- 回音壁 ----
     const liveAnswers = ref([]);
     const connectionStatus = ref('connecting');
-    const qrCodeUrl = computed(()=>`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(`https://zhongwengame.github.io/NEWclass-v2/student.html?topic=${encodeURIComponent(ROOM_CHANNEL)}`)}`);
+    const qrCodeUrl = computed(()=>`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(`https://zhongwengame.github.io/Teacher-wang-HSK/index.html?topic=${encodeURIComponent(ROOM_CHANNEL)}`)}`);
     function exportAnswers(){ if(!liveAnswers.value.length)return alert('暂无记录'); let csv="data:text/csv;charset=utf-8,\uFEFF姓名,时间,回答内容\n"; liveAnswers.value.forEach(r=>{csv+=`${r.name},${r.time},"${r.text.replace(/"/g,'""')}"\n`;}); const l=document.createElement("a"); l.href=encodeURI(csv); l.download="课堂互动记录.csv"; document.body.appendChild(l); l.click(); document.body.removeChild(l); }
 
     onMounted(()=>{
       client = mqtt.connect('wss://05d1d5baec9d4cb3a21f5517b430cff1.s1.eu.hivemq.cloud:8884/mqtt', {username:'classpro',password:'Classpro2026',clientId:'teacher_'+Math.random().toString(16).substr(2,8)});
+
       client.on('connect', ()=>{ connectionStatus.value='connected'; client.subscribe(ROOM_CHANNEL); });
       client.on('error', ()=> connectionStatus.value='error');
-      client.on('message', (topic,message)=>{ if(topic!==ROOM_CHANNEL)return; try{ const data=JSON.parse(message.toString()); if(data.type==='ECHO_WALL'){ liveAnswers.value.unshift(data); if(currentActivity.value==='wc_live'&&data.text){ const w=data.text.trim().substring(0,10); const ex=wordCloudList.value.find(x=>x.text===w); if(ex){ex.count++; ex.size=Math.min(120,30+ex.count*8);} else { wordCloudList.value.push({text:w,count:1,size:30,color:['#4fc3f7','#ffb74d','#aed581','#ff8a65','#9575cd'][Math.floor(Math.random()*5)],x:Math.random()*60+20,y:Math.random()*60+20,opacity:1}); } } } }catch(e){} });
+
+      client.on('message', (topic,message)=>{
+        if(topic!==ROOM_CHANNEL) return;
+        try{
+          const data=JSON.parse(message.toString());
+
+          // 记录实时扫码学生
+          if ((data.type === 'JOIN' || data.type === 'ECHO_WALL' || data.type === 'BUZZ') && data.name) {
+            activeStudentsSet.add(data.name.trim());
+          }
+
+          // 回音壁留言
+          if(data.type==='ECHO_WALL'){
+            liveAnswers.value.unshift(data);
+            if(currentActivity.value==='wc_live'&&data.text){
+              const w=data.text.trim().substring(0,10);
+              const ex=wordCloudList.value.find(x=>x.text===w);
+              if(ex){ex.count++; ex.size=Math.min(120,30+ex.count*8);}
+              else { wordCloudList.value.push({text:w,count:1,size:30,color:['#4fc3f7','#ffb74d','#aed581','#ff8a65','#9575cd'][Math.floor(Math.random()*5)],x:Math.random()*60+20,y:Math.random()*60+20,opacity:1}); }
+            }
+          }
+
+          // 抢答逻辑
+          if (data.type === 'BUZZ') {
+            if (!currentBuzzerWinner.value) {
+              currentBuzzerWinner.value = { name: data.name, team: data.team };
+              publishMessage({
+                type: 'BUZZ_LOCK',
+                winnerName: data.name,
+                winnerTeam: data.team
+              });
+            }
+          }
+
+        }catch(e){}
+      });
 
       setupPinyinMatchRound(0);
       setupCollocationMatch();
@@ -548,7 +714,7 @@ createApp({
 
     return {
       classData, currentModule, currentActivity, currentActivities, setModule,
-      isSidebarCollapsed, isSidebarHidden,
+      isSidebarCollapsed, isSidebarHidden, activeStudents,
       pinyinMatch, selectHanzi, selectPinyin, nextPinyinMatchRound,
       collocationMatch, onCollocationItemClick, setupCollocationMatch,
       charMatch, onCharClick, clearCharSelection, nextCharMatchRound,
@@ -568,7 +734,7 @@ createApp({
       errorSpot, currentErrorSpotData, nextErrorSpot,
       challenge, currentChallengeData, startChallengeTimer, stopChallengeTimer, nextChallenge,
       wordCloudList,
-      jeopardy, shuffleJeopardyTeams, selectJeopardyQuestion, awardPoints, closeJeopardyModal, currentExtraPk, openExtraPk, nextExtraPk,
+      jeopardy, autoGroupActiveStudents, selectJeopardyQuestion, currentBuzzerWinner, openBuzzerForStudents, judgeBuzzerResult, closeJeopardyModal, jeopardyBuzzerColor, jeopardyBuzzerTeamName, currentExtraPk, openExtraPk, nextExtraPk,
       pickedStudent, isSpinning, startPicker,
       isLiveMode, liveAnswers, connectionStatus, qrCodeUrl, exportAnswers
     };
